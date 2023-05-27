@@ -33,6 +33,7 @@ Para adicionar um novo produto é necessário realizar uma requisição do tipo 
 |image|**arquivo contendo a imagem do produto** *|
 |price|'preço-do-produto'|
 |category|'id-da-categoria-do-produto' **|
+|-|-|
 \* no Postman, é necessário alterar de 'text' para 'file' e então basta adicionar o arquivo contendo a imagem do produto neste campo.
 \** basta listar as categorias existentes e copiar o 'id' da categoria desejada para este campo.
 #### Listar produtos existentes
