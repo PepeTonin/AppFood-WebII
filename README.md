@@ -34,7 +34,7 @@ Para adicionar um novo produto é necessário realizar uma requisição do tipo 
 |price|'preço-do-produto'|
 |category|'id-da-categoria-do-produto' 2*|
 
-1* no Postman, é necessário alterar de 'text' para 'file' e então basta adicionar o arquivo contendo a imagem do produto neste campo.
+1* no Postman, é necessário alterar de 'text' para 'file' e então basta adicionar o arquivo contendo a imagem do produto neste campo.\
 2* basta listar as categorias existentes e copiar o 'id' da categoria desejada para este campo.
 #### Listar produtos existentes
 Para listar os produtos existentes basta realizar uma requisição do tipo **GET** no endereço: **http://localhost:3000/products**. O servidor irá retornar os dados de todos os produtos disponíveis na aplicação, incluindo o _id_, que é incuído pelo serviço de banco de dados utilizado pela API.
