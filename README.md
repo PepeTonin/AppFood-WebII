@@ -1,12 +1,12 @@
 
 # API - Serviço de pedido de comida em restaurante
 ## Descrição da aplicação
-A aplicação consiste em uma API (Interface de Programação de Aplicação) que pode ser utilizada por clientes para realizar pedidos em um restaurante. O estabelecimento, por sua vez, pode cadastrar categorias de alimentos e produtos que serão disponibilizados para os clientes realizarem os pedidos.
+A aplicação consiste em uma API (Interface de Programação de Aplicação) que pode ser utilizada para clientes realizarem pedidos em um restaurante. O estabelecimento, por sua vez, pode cadastrar categorias de alimentos e produtos que serão disponibilizados para seus clientes.
 
 ---
 
 ### Guia de utilização da aplicação
-- O primeiro passo é instalar os módulos Node necessários para rodar a aplicação, para isso basta digitar o seguinte código no terminal `npm install`. _É necessário estar na pasta do projeto para que o código funcione de maneira adequada._
+- Após fazer o download dos arquivos contidos neste repositório, o primeiro passo é instalar os módulos Node necessários para rodar a aplicação, para isso basta digitar o seguinte código no terminal `npm install`. _É necessário estar na pasta do projeto para que o código funcione de maneira adequada._
 - O segundo passo é iniciar um container no Docker que servirá de host para o banco de dados Mongo. Para iniciar este container, digite o comando `docker run --name “nome do banco” --volume /save/mongo:/data/db -p 27017:27017 -d mongo` no terminal. _Lembre-se de estar na pasta do projeto antes de digitar o comando._
 -  **Sistema operacional Windows:** antes de rodar o código é necessário abrir o Docker Desktop, portanto é necessário ter este programa instalado na máquina.
 -  **Sistema operacional Linux:** basta rodar o código com o Docker instalado na máquina.
@@ -30,11 +30,11 @@ Para adicionar um novo produto é necessário realizar uma requisição do tipo 
 |-|-|
 |name|'nome-do-produto' |
 |description|'descrição-do-produto' |
-|image|**arquivo contendo a imagem do produto** *|
+|image|**arquivo contendo a imagem do produto** 1*|
 |price|'preço-do-produto'|
-|category|'id-da-categoria-do-produto' **|
-\* no Postman, é necessário alterar de 'text' para 'file' e então basta adicionar o arquivo contendo a imagem do produto neste campo.
-\** basta listar as categorias existentes e copiar o 'id' da categoria desejada para este campo.
+|category|'id-da-categoria-do-produto' 2*|
+1* no Postman, é necessário alterar de 'text' para 'file' e então basta adicionar o arquivo contendo a imagem do produto neste campo.
+2* basta listar as categorias existentes e copiar o 'id' da categoria desejada para este campo.
 #### Listar produtos existentes
 Para listar os produtos existentes basta realizar uma requisição do tipo **GET** no endereço: **http://localhost:3000/products**. O servidor irá retornar os dados de todos os produtos disponíveis na aplicação, incluindo o _id_, que é incuído pelo serviço de banco de dados utilizado pela API.
 #### Listar produtos existentes filtrando por categoria
